@@ -1,0 +1,13 @@
+Primer archivo para la fusion
+
+Escritura en la rama iss53
+cambio en rama iss53
+texto para la segunda fusion
+para la fusion
+
+mas texto ...
+se borro hotfix y se creo otro rama iss53
+se borro el hotfix2 texto entre medio
+texto para la cuarta fusion 
+mas texto 
+mas texto...
