@@ -6,3 +6,4 @@ texto para la segunda fusion
 para la fusion
 
 mas texto ...
+se borro hotfix y se creo otro rama iss53
