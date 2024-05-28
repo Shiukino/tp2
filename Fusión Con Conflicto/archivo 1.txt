@@ -1,1 +1,14 @@
 En la primera fusion con conflicto se cambio todo el contenido
+
+Segundo archivo para la fusion
+
+Escritura en la rama master
+para la fusion
+
+despues de la primera fusion, se elimina iss53
+se crea la rama hotfix para hacer la segunda fusion
+
+para la tercera fusion cree otro archivo que es "archivo 3"
+mas texto para la fusion 
+
+ el ultimo texto
