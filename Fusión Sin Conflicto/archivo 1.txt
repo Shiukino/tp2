@@ -7,6 +7,7 @@ para la fusion
 
 mas texto ...
 se borro hotfix y se creo otro rama iss53
+se borro el hotfix2 texto entre medio
 texto para la cuarta fusion 
 mas texto 
 mas texto...
