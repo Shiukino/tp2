@@ -13,6 +13,4 @@ se borro iss53
 
 se creo rama hotfix2
 para la cuarta fusion
-
-texto para la fusion
-para la ultima fusion 
+a
