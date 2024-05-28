@@ -5,3 +5,5 @@ para la fusion
 
 despues de la primera fusion, se elimina iss53
 se crea la rama hotfix para hacer la segunda fusion
+
+para la tercera fusion cree otro archivo que es "archivo 3"
