@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Calculadora de Área de Terreno</title>
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form id="areaForm">
+            <h2>Calculadora de Área de Terreno</h2>
+            <label for="ladoA">Lado (A):</label>
+            <input type="text" id="ladoA" required placeholder="Ingrese un número"> metros<br>
+
+            <label for="ladoB">Lado (B):</label>
+            <input type="text" id="ladoB" required placeholder="Ingrese un número"> metros<br>
+
+            <label for="ladoC">Lado (C):</label>
+            <input type="text" id="ladoC" required placeholder="Ingrese un número"> metros<br>
+
+            <button type="submit">Calcular</button>
+            <img src="terreno.png" >
+        </form>
+        <script>
+            document.getElementById('areaForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                let ladoA = parseFloat(document.getElementById('ladoA').value);
+                let ladoB = parseFloat(document.getElementById('ladoB').value);
+                let ladoC = parseFloat(document.getElementById('ladoC').value);
+
+                if (isNaN(ladoA) || isNaN(ladoB) || isNaN(ladoC) || ladoA <= 0 || ladoB <= 0 || ladoC <= 0) {
+                    alert('Por favor ingrese numeros positivos');
+                    return;
+                }
+
+                let areaTriangulo = (1/2) * ladoB * (ladoA - ladoC);
+                let areaRectangulo = ladoB * ladoC;
+
+                let areaTotal = areaTriangulo + areaRectangulo;
+
+                alert(`El área del terreno es: ${areaTriangulo} + ${areaRectangulo} = ${areaTotal.toFixed(2)} metros cuadrados.`);
+            });
+        </script>
+    </body>
+</html>
