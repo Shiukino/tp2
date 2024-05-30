@@ -1,8 +1,10 @@
-document.getElementById('imcForm').addEventListener('submit', function(event) {
+const imcForm = $("imcForm");
+
+imcForm.onsubmit = (event) => {
     event.preventDefault();
 
-    let peso = parseFloat(document.getElementById('peso').value);
-    let estatura = parseFloat(document.getElementById('estatura').value);
+    let peso = parseFloat($("peso").value);
+    let estatura = parseFloat($("estatura").value);
 
     if (isNaN(peso) || isNaN(estatura) || peso <= 0 || estatura <= 0) {
         alert('Por favor ingrese numeros positivos');
@@ -12,4 +14,8 @@ document.getElementById('imcForm').addEventListener('submit', function(event) {
     let imc = peso / (estatura * estatura);
 
     alert('Tu índice de masa corporal (IMC) es: ' + imc.toFixed(2));
-});
+};
+
+function $(elemento) {
+    return  document.getElementById(elemento)
+};

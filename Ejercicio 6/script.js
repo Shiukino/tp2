@@ -1,11 +1,11 @@
 function validarFormulario() {
     
-    let nombre = document.getElementById("nombre").value;
-    let apellido = document.getElementById("apellido").value;
-    let edad = parseInt(document.getElementById("edad").value);
-    let altura = parseInt(document.getElementById("altura").value);
-    let email = document.getElementById("email").value;
-    let mensaje = document.getElementById("mensaje");
+    let nombre = $("nombre").value;
+    let apellido = $("apellido").value;
+    let edad = parseInt($("edad").value);
+    let altura = parseInt($("altura").value);
+    let email = $("email").value;
+    let mensaje = $("mensaje");
     let valido = true;
 
     if (nombre === "" || apellido === "" || nombre.length > 50 || apellido.length > 50) {
@@ -34,4 +34,8 @@ function validarFormulario() {
     } else {
         mensaje.style.color = "red";
     }
+};
+
+function $(elemento) {
+    return  document.getElementById(elemento)
 };
