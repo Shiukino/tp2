@@ -5,8 +5,6 @@ const listadoTarea = $("listadoTarea");
 mostrar.addEventListener("click", async () => {
     const res = await fetch("https://jsonplaceholder.typicode.com/users");
     if (res.ok) {
-        console.log("¡Los datos han llegado!");
-
         const personas = await res.json();
         listado.innerHTML = "";
         personas.forEach((persona) => {
@@ -16,11 +14,10 @@ mostrar.addEventListener("click", async () => {
 
             const verTarea = document.createElement("button");
             verTarea.textContent = "Ver Tarea";
+            verTarea.id = "btn-verTarea"
             verTarea.addEventListener("click", async () => {
                 const resTareas = await fetch(`https://jsonplaceholder.typicode.com/todos?userId=${persona.id}`);
                 if (resTareas.ok) {
-                    console.log(`¡Las tareas del usuario ${persona.name} han llegado!`);
-
                     const tareas = await resTareas.json();
                     listadoTarea.innerHTML = "";
                     tareas.forEach((tarea) => {
@@ -40,18 +37,12 @@ mostrar.addEventListener("click", async () => {
                         itemTarea.appendChild(tareaTitulo);
                         listadoTarea.appendChild(itemTarea);
                     });
-
-                } else {
-                    console.error(`Error al obtener las tareas del usuario ${persona.name}`);
                 }
             });
 
             item.appendChild(verTarea);
             listado.appendChild(item);
         });
-
-    } else {
-        console.error("Error: ¡No se pudieron obtener los datos!");
     }
 });
 

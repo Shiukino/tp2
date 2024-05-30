@@ -1,0 +1,56 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+#listado-container {
+    margin: 20px;
+    padding: 20px;
+    width: 1100px;
+    background-color: rgb(75, 169, 164); color: white;
+    border: solid 2px rgb(100, 100, 100);
+    border-radius: 10px;
+}
+
+#listado-container li {
+    padding: 10px 0px;
+}
+
+#listado {
+    padding: 0px 15px;
+    list-style: none;
+    border-radius: 10px;
+    background-color: rgb(40, 40, 40);
+}
+
+#listadoTarea {
+    padding: 0px 15px;
+    list-style: none;
+    border-radius: 10px;
+    background-color: rgb(40, 40, 40);
+}
+
+button {
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#mostrar {
+    padding: 10px;
+    background-color: rgb(207, 117, 0); color: white;
+}
+
+#btn-verTarea {
+    padding: 5px 15px;
+    margin: 0px 0px 0px 23px;
+    background-color: #00448d; color: #fff;
+}
+
+#btn-verTarea:hover {
+    background-color: rgb(207, 117, 0); color: white;
+}
