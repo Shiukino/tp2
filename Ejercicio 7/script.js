@@ -25,15 +25,19 @@ mostrar.addEventListener("click", async () => {
                     listadoTarea.innerHTML = "";
                     tareas.forEach((tarea) => {
                         const itemTarea = document.createElement("li");
-                        const itemTareaName = `ID: ${persona.id} - Nombre: ${persona.name} - Tarea: ${tarea.title} - Completada: ${tarea.completed ? 'Sí' : 'No'}`;
-                        itemTarea.textContent = itemTareaName;
+                        const tareaTitulo = document.createElement("span");
+                        tareaTitulo.textContent = tarea.title;
 
                         if (tarea.completed) {
-                            itemTarea.style.color = "green"
+                            tareaTitulo.style.color = "green"
                         } else {
-                            itemTarea.style.color = "red"
+                            tareaTitulo.style.color = "red"
                         }
 
+                        const itemTareaName = `ID: ${persona.id} - Nombre: ${persona.name} - Tarea: `;
+                        itemTarea.textContent = itemTareaName;
+
+                        itemTarea.appendChild(tareaTitulo);
                         listadoTarea.appendChild(itemTarea);
                     });
 
