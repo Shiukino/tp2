@@ -28,6 +28,12 @@ mostrar.addEventListener("click", async () => {
                         const itemTareaName = `ID: ${persona.id} - Nombre: ${persona.name} - Tarea: ${tarea.title} - Completada: ${tarea.completed ? 'Sí' : 'No'}`;
                         itemTarea.textContent = itemTareaName;
 
+                        if (tarea.completed) {
+                            itemTarea.style.color = "green"
+                        } else {
+                            itemTarea.style.color = "red"
+                        }
+
                         listadoTarea.appendChild(itemTarea);
                     });
 
